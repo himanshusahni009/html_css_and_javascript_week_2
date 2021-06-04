@@ -1,0 +1,78 @@
+/* Common Style */
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+	text-align: center;
+}
+/* Styling <div> */
+div > div {
+	border: 1px solid #000000;
+	position: relative;
+	background-color: #eeeeee;
+}
+
+/* Styling h2 of each div */
+div div h2 {
+	display: inline-block;
+	top: 0;
+	right: 0;
+	position: absolute;
+	margin-top: 0;
+	padding: 8px;
+	border-left: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+/* Styling Title */
+div div:nth-child(1) h2 {
+	background-color: #d59898;
+}
+div div:nth-child(2) h2 {
+	background-color: #c14543;
+}
+div div:nth-child(3) h2 {
+	background-color: #e5d198;
+}
+
+/* Styling <p> elements*/
+div div p {
+	padding: 15px;
+	margin-top: 40px;
+}
+
+/* Styling for desktop version */
+@media (min-width: 992px) {
+	div > div {
+		display: inline-block;
+		width: 32%;
+		margin: 0.5%;
+	}
+}
+
+/* Styling for tablet version */
+@media (min-width: 768px) and (max-width: 991px) {
+	div > div:nth-child(1),
+	div > div:nth-child(2) {
+		display: inline-block;
+		width: 48%;
+		margin: 0.5%;
+	}
+	div > div:nth-child(3) {
+		margin: 0.5%;
+		display: inline-block;
+		width: 97.5%;
+	}
+}
+
+/* Styling for mobile version */
+@media (max-width: 767px) {
+	div > div {
+		width: 100%;
+		display: block;
+		margin-bottom: 3%;
+	}
+}
